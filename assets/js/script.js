@@ -20,7 +20,7 @@ function getApi(event) {
   if (event.target.matches("button")) {
     city = document.getElementById("searchInput").value
     localStorage.setItem('searchInput', city)
-    let queryUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}`;
+    let queryUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}`;
     fetch(queryUrl)
       .then(function (response) {
         console.log(response)
