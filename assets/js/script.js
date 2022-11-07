@@ -11,7 +11,7 @@ const weatherOptions = {
   method: "GET",
   headers: {
     "Key": "c3c213a42209904d63007619504fbde0",
-    "Host": "http://api.openweathermap.org",
+    "Host": "https://api.openweathermap.org",
   },
 };
 
