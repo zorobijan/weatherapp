@@ -40,28 +40,29 @@ function getApi(event) {
         console.log(humidity);
         console.log(wind);
         console.log(icon);
+        let latEl = document.createElement("p");
+        latEl.textContent = "Latitude: " + lat;
+        forecast.appendChild(latEl);
+        let lotEl = document.createElement("p");
+        lotEl.textContent = "Longitude: " + lon;
+        forecast.appendChild(lotEl);
+        let tempEl = document.createElement("p");
+        tempEl.textContent = "Temperature: " + temperature;
+        forecast.appendChild(tempEl);
+        let humidityEl = document.createElement("p");
+        humidityEl.textContent = "Humidity: " + humidity;
+        forecast.appendChild(humidityEl);
+        let windEl = document.createElement("p");
+        windEl.textContent = "Wind: " + wind;
+        forecast.appendChild(windEl);
+        // let iconEl = document.createElement("p");
+        // iconEl.textContent = icon;
+        // forecast.appendChild(iconEl);
       });
   }
 };
 
-let latEl = document.createElement("p");
-calorieEl.textContent = lat;
-forecast.appendChild(latEl);
-let lotEl = document.createElement("p");
-calorieEl.textContent = lon;
-forecast.appendChild(lotEl);
-let tempEl = document.createElement("p");
-calorieEl.textContent = temperature;
-forecast.appendChild(tempEl);
-let humidityEl = document.createElement("p");
-calorieEl.textContent = humidity;
-forecast.appendChild(humidityEl);
-let windEl = document.createElement("p");
-calorieEl.textContent = wind;
-forecast.appendChild(windEl);
-let iconEl = document.createElement("p");
-calorieEl.textContent = icon;
-forecast.appendChild(iconEl);
+
 
 button.addEventListener("click", getApi);
 
